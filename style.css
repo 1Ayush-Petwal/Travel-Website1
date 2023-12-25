@@ -1,0 +1,1387 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 100%;  /* Default Font-size to 10px */
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(245, 245, 245, .97);
+}
+
+/* ################ utility classes ############### */
+
+.btn-primary{
+    display: block;
+    text-decoration: none;
+    background-color: #177BA5;
+    color: #fff;
+    padding: 7px 15px;
+    width: 104.45px;
+    height: 37px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+/* ################# Slider styling ################# */
+
+.navbar-container input[type='checkbox'],
+.navbar-container .hamburger-lines{
+    display: none;
+}
+.navbar{
+    padding: 58px 160px;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+.menu-items{
+    order: 2;
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-items li{
+    font-size: 1rem;
+    color: #0C0C0C;
+    font-weight: 400;
+    list-style: none;
+}
+.menu-items a{
+    text-decoration: none;
+    color: #000;
+    transition: color 0.4s ease-in-out;
+
+}
+.menu-items a:hover{
+    color: rgb(50, 186, 190);
+}
+.logo{
+    order: 1;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.main-heading{
+    width:90%;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.main-heading h1{
+    font-family: 'Abril Fatface', serif;
+    font-size: 5.625rem;
+    font-weight: 400;
+    color: #fff;
+}
+.tab1{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #177BA5;
+    width: 133px;
+    height: 52px;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 40px;
+    padding: 8px 16px;
+    justify-content: space-between;
+}
+.tab2{
+    display: flex;
+    justify-content: space-between;
+    width: 101px;
+    height: 36px;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.tabs{
+    display: flex;
+    width: 330px;
+    height: 84px;
+    align-items: center;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    border-radius: 50px 50px 0px 0px;
+    background-color: rgba(255, 255, 255, 0.70);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.location{
+    display: flex;
+    width: 384.77px;
+    max-height: 139px;
+    padding: 32px;
+    border-radius:40px;
+    justify-content: space-between;
+    background-color: rgba(255,255,255,0.7);
+}
+.date{
+    display: flex;
+    justify-content: space-between;
+    width: 461.57px;
+    max-height: 8.68rem;
+    padding: 32px;
+    border-radius:40px;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.light-highlight{
+    font-size: 18px;
+    font-weight: 500;
+    color:rgba(0, 0, 0, 0.50);
+}
+.cards h1{
+
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.cards{
+    display: flex;
+    height: 60%;
+    width: 939.34px;
+    padding: 32px;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.70);
+    border-radius: 0px 50px 50px 50px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+}
+#slider{
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+}
+#slider .background{
+    height: 83vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: linear-gradient(to bottom,
+    #0000004D,
+    #0000004D,
+    #00000000), 
+    radial-gradient(#00000000,
+    #00000033),url("images/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ticket-card{
+    display: block;
+    width:80vw;
+    max-width:100%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+/* ############## offers #################  */
+
+#offers{
+    width: 100%;
+}
+.title{
+    width: 100%;
+    height: 10%;
+    margin-bottom: 3rem; 
+}
+.title h1{
+    width: auto;
+    height: 100%;
+    margin: 1em auto;
+    font-weight: 600;
+    text-align: center;
+    font-size: 3rem;
+    color: #292D32;
+}
+.offer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(auto-fit, 1fr); */
+    gap: 1.5rem;
+    padding: 0% 10%;
+    height: 100%;
+}
+.card{
+    height: 100%;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.70);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
+    padding: 2em;
+}
+.card img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card h3{
+    text-align: center;
+    margin-bottom: 1em;
+    color: #292D32;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.info{
+    display:flex;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+.greenish{
+    padding: 0px 15px;
+    border-radius: 40px;
+    background-color: #D6EDEB;
+}
+.pink{
+    padding: 0px 15px;
+    border-radius: 40px;
+    background-color: #FCDDEC;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+}
+.cost{
+    display: inline;
+    font-size: 1.5rem;
+    color: #292D32;
+}
+.per-person{
+    display:inline;
+    font-size: 1.125rem;
+    color: rgb(103, 100, 100);
+}
+
+
+
+/* #################### E-book ###################### */
+
+
+
+#e-book{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    overflow: hidden;
+    margin: 5%;
+}
+.book-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    padding-top: 8rem;
+}
+.book-content h2{
+    font-size: 3rem;
+    font-weight: 600;
+    color:#177BA5;
+    padding-bottom: 1em;
+}
+.book-content p{
+    font-size: 1.5rem;
+    color: #292D32;
+}
+.book-content .btn{
+    margin-top: 2rem;
+    width: 202px;
+    font-size: 14px;
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+
+/* ############# Destinations ###############  */
+
+
+#destination{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    position: relative;
+    overflow: hidden;
+}
+.destination-text h1{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.destination-text p{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.destination-text .arrowverse{
+    display: flex;
+    justify-content: flex-end;
+}
+.destination-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    height: 353px;
+    margin-right: 3%;
+}
+.destination-holder{
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    text-align: center;
+    position: relative;
+    max-width: 80vw;
+}
+
+.destination-holder p{
+    position: relative;
+    top: 80%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+#destination .holder{
+    width: 31%;
+    height: 353px;
+    overflow: hidden;
+    /* margin-right: 1.5em; */
+}
+.holder1{
+    background-image: linear-gradient(
+    rgba(0,0,0,0) 70%,
+    rgba(0,0,0,0.4) 80%,
+    rgba(0,0,0,0.7) 90%,
+    rgba(0,0,0,1) 100%),
+    url("images/0_1_384_N.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+}
+.holder2{
+    background-image: linear-gradient(
+    rgba(0,0,0,0) 70%,
+    rgba(0,0,0,0.4) 80%,
+    rgba(0,0,0,0.7) 90%,
+    rgba(0,0,0,1) 100%),
+    url("images/0_1_384_N\ \(2\).svg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+
+}
+.holder3{
+    background-image: linear-gradient(
+    rgba(0,0,0,0) 70%,
+    rgba(0,0,0,0.4) 80%,
+    rgba(0,0,0,0.7) 90%,
+    rgba(0,0,0,1) 100%),
+    url("images/0_3_384_N.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    /* overflow: hidden; */
+}
+
+
+/* ############### blog styling ################# */
+
+
+#blog{
+    height: 80%;
+    width: 100vw;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+.blog-heading{
+    width: 100%;
+    height: 10%;
+    margin-bottom: 3rem; 
+}
+.blog-heading h2{
+    width: auto;
+    height: 100%;
+    margin: 1em auto;
+    font-weight: 600;
+    text-align: center;
+    font-size: 3rem;
+    color: #292D32;
+}
+
+.bloge{
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    margin-bottom: 24px;
+}
+.bloge .blog-text{
+    margin: 24px;
+}
+.blog-text h2{
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+.blog-text p{
+    margin-top: 24px;
+    font-size: 1.5rem;
+}
+.blog-image{
+    object-fit: cover;
+    object-position: center;
+}
+.blog2 .blog-image{
+    order: 2;
+}
+.blog-text-img{
+    display: flex;
+}
+.blog-text-img p{
+    padding-bottom: 1.5rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* ################# testimonial styling #################  */
+
+#testimonial{
+    width: 80%;
+    height: 65vh;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.test-heading{
+    width: 100%;
+    max-height: 10%;
+    margin: auto;
+    margin-bottom: 10%;
+    color: #292D32;
+    text-align: center;
+}
+.test-heading h1{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.t-box{
+    width: 33%;
+    height: 265px;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    padding: 4em 2em 2em 2em;
+    box-shadow: 0 0 20px 0 #00000026;
+    margin-right: 20px;
+}
+.t-box img{
+    position: relative;
+    bottom: 65%;
+    left: 40%;
+}
+.t-box h3{
+    font-size: 1.4rem;
+    font-weight: 500;
+    position: relative;
+    bottom: 50%;
+    right: 3%;
+}
+.t-box p{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    bottom: 40%;
+}
+.side p{
+    font-size: 20px;
+}
+.t-box h3{
+    text-align: center;
+}
+.testimonial-box{
+    padding-top: 10%;
+    width: 150%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    right: 20%;
+    bottom: 15%;
+}
+.t2{
+    position: relative;
+    bottom: 1rem;
+}
+
+.pagination{
+    position: relative;
+    bottom: 90px;
+    left: 50%;
+}
+.pagination img{
+    margin-right: 1%;
+}
+
+
+/* ################ footer styling  #######################  */
+
+#footer-box{
+    width: 100vw;
+    height: 83vh;
+}
+.banner{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/0_2\ 1.png);
+    background-size: cover;
+    background-position: center;
+}
+.banner p{
+    font-size: 2.37rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.banner .btn{
+    padding: 1em;
+    height: 3.314em;
+    width: 235px;
+}
+#footer-box .holder{
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 3%;
+}
+.column{
+    padding: 16px 0 16px 0;
+    height: 227px;
+    width: 25%;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.column h1{
+    font-size: 20px;
+    font-weight: 600;
+}
+.column p{
+    font-size: 14px;
+}
+.column .follow-us{
+    font-size: 1rem;
+    font-weight: 600;
+    width:100%;
+    height: 82px;
+    padding: 16px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.insta-img{
+    display: grid;
+    grid-template-columns: repeat(3, 65px);
+    gap: 10px;
+}
+.trav-hold{
+    width: 159px;
+}
+.column input{
+    padding: 1em;
+    text-align: center;
+    border-radius: 50px;
+    border: 1px;
+}
+.column a{
+    width: 100%;
+    height: 53px;
+    padding: 1em;
+}
+#footer-box{
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    width: 100%;
+    background-color: #292D32;
+    color: #fff;
+    text-align: center;
+    height: 3em;
+    padding: 0.5em;
+    border: 1px 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+/* ############# media queries ################# */
+
+
+@media(max-width: 1102px){
+    .navbar-container input[type='checkbox'],
+    .navbar-container .hamburger-lines{
+    display: block;
+    }
+    .menu-items{
+        order:1;
+        flex-direction: column;
+
+    }
+    .logo{
+        font-size: 2rem;
+        order: 2;
+    }
+    .navbar{
+        opacity: 0.95;
+        padding: 29px 80px;
+    }
+    .navbar{
+        position: relative;
+    }
+    .navbar-container{
+        position: relative;
+        display: block;
+        height: 64px;
+    }
+    .navbar .menu-items{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        height: 100vh;
+        max-width: 300px;
+        padding-top: 100px;
+        transform: translateX(-150%);
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 0px #aaa;
+    }
+    .navbar .menu-items li{
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .navbar-container input[type='checkbox']{
+        display: block;
+        position: absolute;
+        height: 32px;
+        width: 40px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+    .navbar-container .hamburger-lines{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 32px;
+        width: 40px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+    }
+    .navbar-container .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: #333;
+        z-index: 1;
+    }
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line2{
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .logo{
+        position: absolute;
+        top: 20px;
+        right: 15px; 
+
+    }
+    .navbar input[type='checkbox']:checked ~ .menu-items{
+        transform: translateX(0);
+    }
+    .navbar input[type='checkbox']:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .navbar input[type='checkbox']:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+    .navbar input[type='checkbox']:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+    .main-heading h1{
+        font-size: 3.625rem;
+    }
+    .tabs{
+        width: 300px;
+        height: 90px;
+    }
+    .tabs p{
+        font-size: 1.2rem;
+    }
+    .tab1{
+        width: 120px;
+    }
+    .tab2{
+        width: 90px;
+        p{
+            position: relative;
+            top: 5px;
+        }
+    }
+    .cards{
+        width: 700px;
+        height: 120px;
+        padding: 1rem;
+        img{
+            max-height: 3.25rem;
+        }
+    }
+    .date{
+        padding: 1em;
+        height: 90px;
+    }
+    .location{
+        padding: 1em;
+        height: 90px;
+        margin-right: 10px;
+    }
+    .cards h1{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .light-highlight{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .offer{
+        padding: 0;
+        grid-template-columns: repeat(auto-fit, 1fr);
+    }
+    .title h1{
+        height: 100%;
+        margin: 0em auto;
+        font-size: 2.5rem;
+    }
+    .card{
+        padding: 1em;
+        img{
+            width:80%;
+            position: relative;
+            left: 10%;
+        }
+
+    }
+    .info{
+        margin: 1em 0;
+        font-size: 0.8rem;
+    }
+    .greenish{
+        padding: 0px 10px;
+        border-radius: 40px;
+        background-color: #D6EDEB;
+    }
+    .pink{
+        padding: 0px 10px;
+    }
+    .cost{
+        font-size: 1.2rem;
+    }
+    .per-person{
+        font-size: 0.825rem;
+    }
+
+    /* ############# e-book ############### */
+    #e-book{
+        width: 100vw;
+        margin:0;
+    }
+    .book-content{
+        padding: 1rem;
+        width:50%;
+        max-width: 50%;
+        padding-top: 2rem;
+    }
+    .book-content h2{
+        font-size: 2.5rem;
+        padding-bottom: 0.8em;
+    }
+    .book-content p{
+        font-size: 1rem;
+        color: #292D32;
+    }
+    .book-content .btn{
+        margin-top: 2rem;
+        width: 202px;
+        font-size: 12px;
+        font-weight: 500;
+        align-self: flex-start;
+    }
+    #e-book img{
+        width: 40%;
+    }
+
+    #destination{
+        width: 95%;
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .destination-text h1{
+        font-size: 2.5rem;
+    }
+    .destination-text p{
+        font-size: 1rem;
+    }
+    .arrowverse img{
+        width: 25px;
+        object-fit: cover;
+    }
+    .destination-text{
+        width: 40%;
+        height: 340px;
+        margin-right: 3%;
+    }
+    .destination-holder p{
+        font-size: 1rem;
+    }
+    #destination .holder{
+        height: 340px;
+    }
+
+    #blog{
+        height: 80%;
+        width: 100vw;
+        margin: auto;
+        margin-bottom: 5rem;
+    }
+    .blog-heading{
+        width: 100%;
+        height: 10%;
+        margin-bottom: 2rem; 
+    }
+    .blog-heading h2{
+        margin: 0.5em auto;
+        font-size: 2.5rem;
+    }
+    
+    .bloge{
+        width: 90vw;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .bloge .blog-text{
+        margin: 1rem;
+    }
+    .blog-text h2{
+        font-size: 1.6rem;
+    }
+    .blog-text p{
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+    .blog-image{
+        width: 50%;
+        object-fit: cover;
+    }
+    .blog-text-img p{
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+
+    #testimonial{
+        width: 90%;
+        height: 45vh;
+    }
+    .test-heading{
+        width: 100%;
+        max-height: 10%;
+        margin: auto;
+        margin-bottom: 15%;
+    }
+    .test-heading h1{
+        font-size: 2.5rem;
+    }
+    .t-box{
+        margin-right: 1rem;
+    }
+    .t-box img{
+        position: relative;
+        bottom:55%;
+        left: 40%;
+    }
+    .t-box p{
+        font-size: 1.4rem;
+    }
+    .side p{
+        font-size: 1rem;
+    }
+    .testimonial-box{
+        padding-top: 5%;
+        position: relative;
+        bottom: 10%;
+    }
+
+    #footer-box .holder{
+        width: 95%;
+        margin: auto;
+        margin-top: 3%;
+    }
+    .insta-img img{
+        width: 50px;
+        object-fit: cover;
+    }
+    .column a{
+        width: 100%;
+        height: 45px;
+        padding: 1em;
+        font-size: 0.8em;
+    }
+    .banner p{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .pagination{
+        position: relative;
+        bottom: 55px;
+        left: 47%;
+    }
+}
+
+ /* ################ 800px screens #################  */
+
+
+@media(max-width: 800px){
+    .main-heading h1{
+        font-size: 2.625rem;
+    }
+    .navbar{
+        padding: 10px 0;
+    }
+    .tabs{
+        width: 200px;
+        height: 60px;
+        padding: 8px 20px;
+    }
+    .tabs img{
+        height: 20px;
+        object-fit: cover;
+    }
+    .tabs p{
+        font-size: 0.8rem;
+    }
+    .tab1{
+        width: 80px;
+        height: 35px;
+        padding: 2px 8px;
+        margin-right: 2px;
+    }
+    .tab2{
+        width: 60px;
+        position: relative;
+        top: 8px;
+        p{
+            position: relative;
+            top: 2px;
+        }
+    }
+    .cards{
+        width: 400px;
+        height: 70px;
+        padding: 0.5em;
+        img{
+            max-height: 2.25rem;
+        }
+    }
+    .date{
+        padding: 0.5em;
+        height: 55px;
+    }
+    .location{
+        padding: 0.5em;
+        height: 55px;
+        margin-right: 10px;
+    }
+    .cards h1{
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+    .light-highlight{
+        font-size: 8px;
+        font-weight: 400;
+    }
+    #slider .background{
+        height: 40vh;
+    }
+    #slider{
+        height: 50vh;
+    }
+
+    /* ########## offer styling #################### */
+
+    .offer{
+        padding: 0;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ############## destination ###############  */
+
+    #destination{
+        flex-direction: column;
+    }
+    .destination-text{
+        width: 40%;
+        height: 340px;
+        position: relative;
+        left: 25%;
+    }
+    .destination-holder p{
+        font-size: 1rem;
+    }
+    #destination .holder{
+        height: 300px;
+        width: 30%;
+    }
+    .destination-holder{
+        margin-top: 15px;
+        width: 490px;
+        position: relative;
+        left: 10%;
+    }
+
+    /* ############# testimonial ###############  */
+
+    #testimonial{
+        width: 90%;
+        height: 45vh;
+    }
+    .test-heading{
+        width: 100%;
+        max-height: 10%;
+        margin: auto;
+        margin-bottom: 15%;
+    }
+    .test-heading h1{
+        font-size: 2.5rem;
+    }
+    .t-box{
+        margin-right: 1rem;
+    }
+    .t-box img{
+        position: relative;
+        bottom:55%;
+        left: 40%;
+    }
+    .t-box p{
+        font-size: 1rem;
+    }
+    .side p{
+        font-size: 0.8rem;
+    }
+    .testimonial-box{
+        padding-top: 5%;
+        position: relative;
+        bottom: 0%;
+    }
+    .pagination{
+        position: relative;
+        bottom: 8px;
+        left: 43%;
+    }
+
+    /* ############# footer ############### */
+
+    #footer-box .holder{
+        width: 95%;
+        margin: auto;
+        margin-top: 3%;
+    }
+    .insta-img{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+    .trav-hold{
+        width: 110px;
+    }
+    .insta-img img{
+        width: 50px;
+        object-fit: cover;
+    }
+    .insta-col{
+        width: 110px;
+    }
+    .column{
+        margin-right: 0.3em;
+        padding-top: 0;
+    }
+
+    .column a{
+        width: 100%;
+        height: 45px;
+        padding: 1em;
+        font-size: 0.8em;
+    }
+    .banner p{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media(max-width: 500px){
+    .logo{
+        font-size: 1.5rem;
+    }
+    .navbar-container input[type='checkbox']{
+        display: block;
+        position: absolute;
+        height: 24px;
+        width: 30px;
+    }
+    .navbar-container .hamburger-lines{
+        height: 24px;
+        width: 30px;
+    }
+    .main-heading h1{
+        font-size: 2rem;
+    }
+    .tabs{
+        width: 150px;
+        height: 40px;
+        padding: 8px 20px;
+    }
+    .tabs img{
+        height: 10px;
+        object-fit: cover;
+    }
+    .tabs p{
+        font-size: 0.8rem;
+    }
+    .tab1{
+        width: 80px;
+        height: 35px;
+        padding: 2px 8px;
+        margin-right: 2px;
+    }
+    .tab2{
+        width: 60px;
+        position: relative;
+        top: 10px;
+        p{
+            position: relative;
+            top: -3px;
+        }
+    }
+    .cards{
+        width: 325px;
+        height: 60px;
+        padding: 0.5em;
+        img{
+            max-height: 1.25rem;
+        }
+    }
+    .date{
+        padding: 0.5em;
+        height: 45px;
+    }
+    .location{
+        padding: 0.5em;
+        height: 45px;
+    }
+    .cards h1{
+        font-size: 0.5rem;
+        font-weight: 400;
+    }
+    .light-highlight{
+        font-size: 8px;
+        font-weight: 400;
+    }
+
+    /* ########## offer styling #################### */
+    .title h1{
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+    .offer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #destination{
+        width: 95%;
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        flex-direction: column;
+    }
+    .destination-text h1{
+        font-size: 2rem;
+    }
+
+    /* ############## blog styling ###############  */
+
+    .blog-heading h2{
+        font-size: 2rem;
+    }
+    .bloge{
+        flex-direction: column;
+    }
+    .blog1{
+        border-bottom: 2px solid black;
+    }
+
+    /* ############# testimonial ###############  */
+
+    #testimonial{
+        width: 100%;
+        height: 55vh;
+        position: relative;
+        top:-40px;
+    }
+    .test-heading{
+        width: 100%;
+        max-height: 10%;
+        margin: auto;
+        margin-bottom: 15%;
+    }
+    .test-heading h1{
+        font-size: 1.5rem;
+    }
+    .t-box{
+        margin-right: 1rem;
+        height: 230px;
+    }
+    .t-box img{
+        position: relative;
+        bottom:55%;
+        left: 40%;
+    }
+    .t-box h3{
+        font-size: 1rem;
+    }
+    .t-box p{
+        font-size: 0.8rem;
+    }
+    .t-box img{
+        height: 43px;
+        object-fit: cover;
+    }
+    .side p{
+        font-size: 0.5rem;
+    }
+    .testimonial-box{
+        padding-top: 5%;
+        position: relative;
+        bottom: 0%;
+    }
+    .pagination{
+        position: relative;
+        bottom: 8px;
+        left: 43%;
+    }
+    .pagination img{
+        height: 8px;
+    }
+
+    /* ############# footer ############### */
+
+    .column h1{
+        font-size: 12px;
+    }
+    .column p{
+        font-size: 8px;
+    }
+    .insta-img{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+    .trav-hold{
+        width: 80px;
+    }
+    .insta-img img{
+        width: 50px;
+        object-fit: cover;
+    }
+    .insta-col{
+        width: 110px;
+    }
+    .column{
+        margin-right: 0.3em;
+        padding-top: 0;
+        height: 200px;
+    }
+    .column a{
+        width: 100%;
+        height: 30px;
+        padding: 1em;
+        font-size: 0.5em;
+    }
+    .column input{
+        font-size: 0.5em;
+    }
+    .banner p{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    footer p{
+        font-size: 0.8rem;
+    }
+}
+
+@media(orientation: landscape) and (max-height: 500px){
+    #slider{
+        height: 55vmax;
+    }
+     #slider .background{
+        height: 40vmax;
+    }
+    #testimonial{
+        height: 45vmax;
+        position: relative;
+        top: -30px;
+    }
+    .test-heading{
+        margin-bottom: 5%;
+    }
+    .test-heading h1{
+        font-size: 2rem;
+    }
+    .t-box h3{
+        font-size: 1rem;
+    }
+    .t-box img{
+        height: 60px;
+    }
+    .t-box{
+        height: 200px;
+        margin-top: 0px;
+    }
+    .pagination img{
+        height: 8px;
+    }
+}
+
+/* ############# END ################## */
